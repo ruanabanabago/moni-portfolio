@@ -1171,8 +1171,14 @@ section {
 /* Projects Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* Project Card */
@@ -1278,6 +1284,30 @@ section {
   background: var(--pop-pink);
   color: var(--pop-white);
   box-shadow: var(--shadow-lg);
+}
+
+.tiktok-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tiktok-card .project-overlay {
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1rem;
+  background: transparent;
+}
+
+.tiktok-card .play-button-pop {
+  width: 52px;
+  height: 52px;
+}
+
+.tiktok-button img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  pointer-events: none;
 }
 
 .project-card-body {
